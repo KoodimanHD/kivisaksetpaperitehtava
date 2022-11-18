@@ -38,12 +38,16 @@ public class Pelaaja {
     public String getValinta() {
 		return valinta;
 	}
+    
+    public void setValinta(String valinta) {
+		this.valinta = valinta;
+	}
 
 	public void setVoitot() {
         this.voitot++;
     }
-
-    public int getVoitot() {
+    
+	public int getVoitot() {
         return (voitot);
     }
 }
