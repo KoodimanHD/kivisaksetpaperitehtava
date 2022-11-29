@@ -1,22 +1,23 @@
-
 package kivipaperisakset;
 
 /**
  *
- * @author Otso Poussa, Ira Dook
- * Luokka muodostaa pelaaja-olion.
+ * @author Otso Poussa
+ * Luokka muodostaa pelaaja-olion. Olio pelaa kivi-paperi-sakset-peliÃ¤.
+ * <b>voitot</b>-muuttuja sisÃ¤ltÃ¤Ã¤ pelaajan voittamien erien mÃ¤Ã¤rÃ¤n.
+ * <b>valinta</b>-muuttuja sisÃ¤ltÃ¤Ã¤ pelaajan arpoman valinnan (kivi, paperi tai sakset).
+ * 
  */
 public class Pelaaja {
-
-	private int voitot;      // Voittojen lukumäärä
-    private String valinta;	// Tämän hetkinen valinta.
+	private int voitot;      // Voittojen lukumï¿½ï¿½rï¿½
+    private String valinta;	// Tï¿½mï¿½n hetkinen valinta.
 
     public Pelaaja() {
     	this.voitot = 0;
     	this.valinta = "";
     }
     /**
-     * Generoi <b>Math.random</b> -kokonaisluvun 1-3 väliltä, ja valitsee tämän perusteella <b>kiven</b>, <b>paperin</b> tai <b>sakset</b>.
+     * Generoi <b>Math.random</b> -kokonaisluvun 1-3 vÃ¤liltÃ¤, ja valitsee tÃ¤mÃ¤n perusteella <i>kiven</i>, <i>paperin</i> tai <i>sakset</i>.
      */
     public String teeValinta() {
         this.valinta = "";
