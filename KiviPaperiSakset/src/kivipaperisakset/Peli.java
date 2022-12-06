@@ -1,8 +1,8 @@
 package kivipaperisakset;
 
 /**
- * @author Otso Poussa 
- * Luokka sisältää Kivi-sakset-paperi -pelin muuttujat, sekä toiminnan ohjaavan main-metodin.
+ * @author Otso Poussa Luokka sisältää Kivi-sakset-paperi -pelin muuttujat,
+ *         sekä toiminnan ohjaavan main-metodin.
  * 
  */
 public class Peli {
@@ -11,9 +11,10 @@ public class Peli {
 
 	/**
 	 * Ohjaa pelin toimintaa. Metodin do-while -toistorakenne suorittaa erän
-	 * kerrallaan. Jokaisessa erässä metodi printtaa pelin sen hetkiset pisteytykset
-	 * ja kutsuu vertaileValinnat-metodia selvittämään, mikä erän lopputulos on.
-	 * Do-while lause toistaa eriä, kunnes peliLoppui-muuttuja on true.
+	 * kerrallaan. Jokaisessa erässä metodi printtaa pelin sen hetkiset
+	 * pisteytykset ja kutsuu vertaileValinnat-metodia selvittämään, mikä erän
+	 * lopputulos on. Do-while lause toistaa eriä, kunnes peliLoppui-muuttuja on
+	 * true.
 	 */
 	public static void main(String args[]) {
 		pelatutPelit = 0;
@@ -44,7 +45,7 @@ public class Peli {
 	 * @param p2
 	 * @return
 	 */
-	private static boolean tarkistaTilanne(Pelaaja p1, Pelaaja p2) {
+	public static boolean tarkistaTilanne(Pelaaja p1, Pelaaja p2) {
 		if ((p1.getVoitot() >= 3) || (p2.getVoitot() >= 3)) {
 			System.out.println("KOLME VOITTOA - PELI P��TTYY");
 			return true;
@@ -53,16 +54,16 @@ public class Peli {
 	}
 
 	/**
-	 * Vertailee kahden parametrina saadun pelaajan tekemiä valintoja, ja nostaa sen
-	 * perusteella voittaneen pelaajan voittoja. Tasapelin sattuessa nostaa
-	 * tasapelit-muuttujaa. Metodin sisältää if-lauseet joilla, tarkistetaan, onko
-	 * pelaaja2 tehnyt voittavat valinnan, tai onko sattunut tasapeli. Jos nämä
-	 * eivät täyty metodi lisää pelaaja1:delle uuden voiton.
+	 * Vertailee kahden parametrina saadun pelaajan tekemiä valintoja, ja nostaa
+	 * sen perusteella voittaneen pelaajan voittoja. Tasapelin sattuessa nostaa
+	 * tasapelit-muuttujaa. Metodin sisältää if-lauseet joilla, tarkistetaan,
+	 * onko pelaaja2 tehnyt voittavat valinnan, tai onko sattunut tasapeli. Jos
+	 * nämä eivät täyty metodi lisää pelaaja1:delle uuden voiton.
 	 * 
 	 * @param pelaaja1
 	 * @param pelaaja2
 	 */
-	static void vertaileValinnat(Pelaaja pelaaja1, Pelaaja pelaaja2) {
+	public static void vertaileValinnat(Pelaaja pelaaja1, Pelaaja pelaaja2) {
 		if (pelaaja1.getValinta() == pelaaja2.getValinta()) {
 			tasapelit++;
 			System.out.println("\n\t\t\t Tasapeli \n");
@@ -70,20 +71,20 @@ public class Peli {
 		}
 		if ((pelaaja1.getValinta().equals("kivi")) && (pelaaja2.getValinta().equals("paperi"))) {
 			System.out.println("Pelaaja 2 voittaa er�n");
-			pelaaja2.setVoitot();
+			pelaaja2.lisaaVoitto();
 			return;
 		}
 		if ((pelaaja1.getValinta().equals("paperi")) && (pelaaja2.getValinta().equals("sakset"))) {
 			System.out.println("Pelaaja 2 voittaa er�n");
-			pelaaja2.setVoitot();
+			pelaaja2.lisaaVoitto();
 			return;
 		}
 		if ((pelaaja1.getValinta().equals("sakset")) && (pelaaja2.getValinta().equals("kivi"))) {
 			System.out.println("Pelaaja 2 voittaa er�n");
-			pelaaja2.setVoitot();
+			pelaaja2.lisaaVoitto();
 			return;
 		}
 		System.out.println("Pelaaja 1 voittaa er�n.");
-		pelaaja1.setVoitot();
+		pelaaja1.lisaaVoitto();
 	}
 }

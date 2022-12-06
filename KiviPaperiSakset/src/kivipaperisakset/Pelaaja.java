@@ -44,7 +44,7 @@ public class Pelaaja {
 		this.valinta = valinta;
 	}
 
-	public void setVoitot() {
+	public void lisaaVoitto() {
         this.voitot++;
     }
     
