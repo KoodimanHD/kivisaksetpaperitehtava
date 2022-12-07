@@ -12,7 +12,9 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import kivipaperisakset.Pelaaja;
 import kivipaperisakset.Peli;
-
+/**
+ *Testaa Peli-luokan metodeja.
+ */
 class TestataanPeli {
 	Pelaaja p1, p2;
 
