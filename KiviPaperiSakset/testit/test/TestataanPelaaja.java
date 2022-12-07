@@ -21,12 +21,11 @@ class TestataanPelaaja {
 		p = new Pelaaja();
 	}
 	/**
-	 * Testaa teeValinta-metodia.
-	 * Tekee kutsun metodiin, jonka jälkeen tarkistaa tuloksen getterillä.
+	 * Testaa teeValinta-metodia. Tekee kutsun metodiin, jonka jälkeen tarkistaa tuloksen getterillä. 
 	 * Jos tulos on muu, kuin kivi, sakset tai paperi, testi ei mene läpi.
 	 */
 	@Test
-	void test() {
+	void testataanTeeValinta() {
 		boolean validiValinta = false;
 		p.teeValinta();
 

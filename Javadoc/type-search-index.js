@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"kivipaperisakset","l":"Pelaaja"},{"p":"kivipaperisakset","l":"Peli"},{"p":"test","l":"TestataanPeli"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"kivipaperisakset","l":"Pelaaja"},{"p":"kivipaperisakset","l":"Peli"},{"p":"test","l":"TestataanPelaaja"},{"p":"test","l":"TestataanPeli"}];updateSearchResults();
