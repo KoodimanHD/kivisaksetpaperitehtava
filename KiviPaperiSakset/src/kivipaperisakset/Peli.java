@@ -43,8 +43,7 @@ public class Peli {
 	 * 
 	 * @param p1
 	 * @param p2
-	 * @return
-	 */
+	 * @return true tai false, eli päätös siitä päättykö peli vai ei.	 */
 	public static boolean tarkistaTilanne(Pelaaja p1, Pelaaja p2) {
 		if ((p1.getVoitot() >= 3) || (p2.getVoitot() >= 3)) {
 			System.out.println("KOLME VOITTOA - PELI Pï¿½ï¿½TTYY");
@@ -64,7 +63,7 @@ public class Peli {
 	 * @param pelaaja2
 	 */
 	public static void vertaileValinnat(Pelaaja pelaaja1, Pelaaja pelaaja2) {
-		if (pelaaja1.getValinta() == pelaaja2.getValinta()) {
+		if (pelaaja1.getValinta().equals(pelaaja2.getValinta())) {
 			tasapelit++;
 			System.out.println("\n\t\t\t Tasapeli \n");
 			return;

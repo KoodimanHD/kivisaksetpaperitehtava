@@ -16,23 +16,10 @@ import kivipaperisakset.Peli;
 class TestataanPeli {
 	Pelaaja p1, p2;
 
-	@BeforeAll
-	static void setUpBeforeClass() throws Exception {
-
-	}
-
-	@AfterAll
-	static void tearDownAfterClass() throws Exception {
-	}
-
 	@BeforeEach
 	void setUp() throws Exception {
 		p1 = new Pelaaja();
 		p2 = new Pelaaja();
-	}
-
-	@AfterEach
-	void tearDown() throws Exception {
 	}
 	/**
 	 * Testaa vertailevalinta-metodia. Testattua skenaarioita ovat kaikki mahdolliset kivi-paperi-sakset -kombinaatiot.
@@ -66,13 +53,13 @@ class TestataanPeli {
 	/**
 	 * Testaa tarkistaTilanne -metodia.
 	 * Testit toteutetaan lis‰‰m‰ll‰ pelaajille parametreissˆ m‰‰ritellyt m‰‰r‰t voittoja, jonka j‰lkeen tarkistetaan,
-	 * palauttaako metodi halutun tuloksen (peli jatkuu / p‰‰ttyy).
+	 * palauttaako metodi halutun tuloksen (true / false).
 	 * @param p1Voitot
 	 * @param p2Voitot
 	 * @param haluttuTulos
 	 */
 	@ParameterizedTest
-	@CsvSource({"0,0,false", "1,1,false", "2,2,false", "3,3,true", "0,3,true", "3,0,true", "4,0, true", "99,3, true"})
+	@CsvSource({"0,0,false", "1,1,false", "2,2,false", "3,3,true", "0,3,true", "3,0,true", "4,0, true", "99,-99, true"})
 	void testataanTarkistaTilanne(int p1Voitot, int p2Voitot, boolean haluttuTulos) {
 		while(p1.getVoitot() != p1Voitot) {
 			p1.lisaaVoitto();
